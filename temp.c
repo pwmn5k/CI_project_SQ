@@ -4,6 +4,7 @@
 int main(void){
 
     puts("Hello World defsef!");
+    puts("Hello World!");   //new
 
 
 return 0;
