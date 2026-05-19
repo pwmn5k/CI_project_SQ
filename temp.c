@@ -3,7 +3,7 @@
 
 int main(void){
 
-    puts("Hello World defsef!");
+    puts("Hello World");
 
 
 return 0;
