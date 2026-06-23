@@ -2,4 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 
 project(sensor_demo C)
 
-add_executable(sensor_app src/main.c)
+add_executable(sensor_app
+    src/main.c
+    src/sensor.c
+)

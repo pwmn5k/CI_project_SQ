@@ -1,0 +1,1 @@
+int calculate_average(int a, int b);

@@ -4,7 +4,7 @@ CC := gcc
 # Ordner
 SRC_DIR := c_app/src
 BUILD_DIR := c_app/build
-DATA_DIR := data
+
 
 # Dateien
 TARGET := $(BUILD_DIR)/sensor_app.exe
@@ -15,21 +15,21 @@ all: build
 
 # C-Programm mit GCC bauen
 build:
-	if not exist c_app\build mkdir c_app\build
-	gcc c_app/src/main.c -o c_app/build/sensor_app.exe
+	@if not exist c_app\build mkdir c_app\build
+	@gcc c_app/src/main.c c_app/src/sensor.c -o c_app/build/sensor_app.exe
 
 # C-Programm ausführen
 run:
 	./$(TARGET)
 
-# Python-Auswertung starten
-analyze:
-	cd py_app && python src/analyze.py
+test: build
+	@gcc c_app/tests/test_sensor.c c_app/src/sensor.c -o c_app/build/test_sensor.exe
+	@c_app/build/test_sensor.exe
+	@cd py_app && pytest
 
 # Alles ausführen
-demo: build run analyze
+demo: build run 
 
-# Build-Dateien und CSV löschen
+# Build-Dateien löschen
 clean:
-	rm -rf $(BUILD_DIR)
-	rm -f $(DATA_DIR)/sensor.csv
+	if exist c_app\build rmdir /s /q c_app\build
