@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+
+# C Build
+c_app/build/
+
+# VS Code
+.vscode/
