@@ -30,7 +30,7 @@ jobs:
     # Unit-Tests ausführen
     - name: Run tests
       run: make test
-      
+
     # Python-Abhängigkeiten installieren
     - name: Install Python dependencies
       run: pip install -r py_app/requirements.txt
@@ -38,3 +38,7 @@ jobs:
     # C- und Python-Tests ausführen
     - name: Run tests
       run: make test
+
+    # Statische Code-Analyse
+    - name: Static code analysis
+      run: make check
