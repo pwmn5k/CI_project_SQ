@@ -1,7 +1,7 @@
 # Continuous Integration Project
 
 **Name:Stefan Zube
-
+..
 ## Projektbeschreibung
 
 Das Projekt wurde im Rahmen der Lehrveranstaltung Softwarequalität erstellt. Ziel war es, eine einfache Continuous-Integration-Pipeline für ein gemischtes C- und Python-Projekt aufzubauen.
