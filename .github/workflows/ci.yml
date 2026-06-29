@@ -16,3 +16,7 @@ jobs:
       # Testschritt
       - name: Test workflow
         run: echo "GitHub Actions is running!"
+
+      - name: Build C application
+        working-directory: proj
+        run: make build

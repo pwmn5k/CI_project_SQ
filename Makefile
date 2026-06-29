@@ -15,7 +15,7 @@ all: build
 
 # C-Programm mit GCC bauen
 build:
-	@if not exist c_app\build mkdir c_app\build
+	@mkdir -p c_app/build
 	@gcc c_app/src/main.c c_app/src/sensor.c -o c_app/build/sensor_app.exe
 
 # C-Programm ausführen
@@ -36,4 +36,4 @@ demo: build run
 
 # Build-Dateien löschen
 clean:
-	if exist c_app\build rmdir /s /q c_app\build
+	rm -rf c_app/build
