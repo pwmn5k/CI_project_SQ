@@ -12,3 +12,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      # Testschritt
+      - name: Test workflow
+        run: echo "GitHub Actions is running!"

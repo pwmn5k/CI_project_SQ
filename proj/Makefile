@@ -27,6 +27,10 @@ test: build
 	@c_app/build/test_sensor.exe
 	@cd py_app && pytest
 
+check:
+	@gcc -Wall -Wextra -Wpedantic -Werror -fsyntax-only c_app/src/main.c c_app/src/sensor.c
+	@echo "Static code analysis passed."
+
 # Alles ausführen
 demo: build run 
 
