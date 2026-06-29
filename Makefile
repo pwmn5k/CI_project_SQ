@@ -29,6 +29,7 @@ test: build
 
 check:
 	@gcc -Wall -Wextra -Wpedantic -Werror -fsyntax-only c_app/src/main.c c_app/src/sensor.c
+	@cd py_app && ruff check .
 	@echo "Static code analysis passed."
 
 # Alles ausführen

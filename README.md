@@ -57,4 +57,4 @@ Dabei werden:
 * alle Unit-Tests ausgeführt,
 * die statische Codeanalyse durchgeführt.
 
-Dadurch wird sichergestellt, dass fehlerhafte Änderungen früh erkannt werden.
+Dadurch wird sichergestellt, dass fehlerhafte Änderungen früh erkannt werden
